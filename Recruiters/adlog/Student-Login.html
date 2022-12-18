@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student-Login</title>
+    <link rel="stylesheet" href="Student-Login.css">
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <div class="content">
+            <div class="logo"><a href="#">PIRERS</a></div>
+                <ul class="tab">
+                    <li><a href="#">Home</a></li>
+                    <li>
+                        <a href="#" class="Company Lists">Companies</a>
+                        <input type="hidden" id="TypesOfCompany">
+                        <label for="TypesOfCompany">Company Types</label>
+                        <ul>
+                            <li><a href="#">Dream Company</a></li>
+                            <li><a href="#" class="Company Lists">Based on CTC</a>
+                                <input type="hidden" id="CTC">
+                                <label for="CTC">CTC</label>
+                                <ul>
+                                    <li><a href="#">Above 50lpa</a></li>
+                                    <li><a href="#">30-50 lpa</a></li>
+                                    <li><a href="#">10-30lpa</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Average Company</a></li>
+                            <li><a href="#">Bulk Recutires</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="Student Lists">Student Lists</a>
+                        <input type="hidden" id="TypesOfStudent">
+                        <label for="TypesOfStudent">Branch</label>
+                        <ul>
+                            <li><a href="#">CE</a></li>
+                            <li><a href="#">IT</a></li>
+                            <li><a href="#">ENTC</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="file:///D:/Web%20dev/Student-Login.html">Add a Student</a></li>
+                    <li><a href="file:///D:/Web%20dev/AddCompany.html">Add a Company</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="Student-Login">
+        <div class="Student-login">
+            <h2>Add a Student</h2>
+            <form action="action_page.php">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="fname">First Name</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="fname" name="firstname" placeholder="Your Name...">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="lname">Last Name</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="lname" name="lastname" placeholder="Your  last Name...">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="seatno.">Seat Number</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="seatno." name="seatnum" placeholder="Your Seat Number...">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="branch">Branch</label>
+                    </div>
+                    <div class="col-75">
+                        <select name="branch" id="branch">
+                            <option value="CE">CE</option>
+                            <option value="IT">IT</option>
+                            <option value="ENTC">ENTC</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="CGPA">
+                    <div class="heading"><h3>CGPA</h3></div>
+                    <div class="Sem1">
+                        <div class="row">
+                            <div class="col-10">
+                                <label for="Sem1">Sem1</label>
+                            </div>
+                            <div class="col-40">
+                                <input type="number" id="Sem1" name="Sem1" placeholder="CGPA of SEM 1...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Sem2">
+                        <div class="row">
+                            <div class="col-10">
+                                <label for="Sem2">Sem2</label>
+                            </div>
+                            <div class="col-40">
+                                <input type="number" id="Sem2" name="Sem2" placeholder="CGPA of SEM 2...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Sem3">
+                        <div class="row">
+                            <div class="col-10">
+                                <label for="Sem3">Sem3</label>
+                            </div>
+                            <div class="col-40">
+                                <input type="number" id="Sem3" name="Sem3" placeholder="CGPA of SEM 3...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Sem4">
+                        <div class="row">
+                            <div class="col-10">
+                                <label for="Sem4">Sem4</label>
+                            </div>
+                            <div class="col-40">
+                                <input type="number" id="Sem4" name="Sem4" placeholder="CGPA of SEM 4...">
+                            </div>
+                        </div>
+                    </div>                
+                    <div class="Sem5">
+                        <div class="row">
+                            <div class="col-10">
+                                <label for="Sem5">Sem5</label>
+                            </div>
+                            <div class="col-40">
+                                <input type="number" id="Sem5" name="Sem5" placeholder="CGPA of SEM 5...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Sem6">
+                        <div class="row">
+                            <div class="col-10">
+                                <label for="Sem6">Sem6</label>
+                            </div>
+                            <div class="col-40">
+                                <input type="number" id="Sem6" name="Sem6" placeholder="CGPA of SEM 6...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Sem7">
+                        <div class="row">
+                            <div class="col-10">
+                                <label for="Sem7">Sem7</label>
+                            </div>
+                            <div class="col-40">
+                                <input type="number" id="Sem7" name="Sem7" placeholder="CGPA of SEM 7...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Sem8">
+                        <div class="row">
+                            <div class="col-10">
+                                <label for="Sem8">Sem8</label>
+                            </div>
+                            <div class="col-40">
+                                <input type="number" id="Sem8" name="Sem8" placeholder="CGPA of SEM 8...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="Email">Email</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="email" id="Email" name="Email" placeholder="Your Email...">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="mobilenum">Mobile Number</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="number" id="mobilenum." name="mobilenum" placeholder="Your Mobile Number...">
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

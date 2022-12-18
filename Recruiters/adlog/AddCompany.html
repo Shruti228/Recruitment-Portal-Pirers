@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a Company</title>
+    <link rel="stylesheet" href="AddCompany.css">
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <div class="content">
+            <div class="logo"><a href="#">PIRERS</a></div>
+                <ul class="tab">
+                    <li><a href="#">Home</a></li>
+                    <li>
+                        <a href="#" class="Company Lists">Companies</a>
+                        <input type="hidden" id="TypesOfCompany">
+                        <label for="TypesOfCompany">Company Types</label>
+                        <ul>
+                            <li><a href="#">Dream Company</a></li>
+                            <li><a href="#" class="Company Lists">Based on CTC</a>
+                                <input type="hidden" id="CTC">
+                                <label for="CTC">CTC</label>
+                                <ul>
+                                    <li><a href="#">Above 50lpa</a></li>
+                                    <li><a href="#">30-50 lpa</a></li>
+                                    <li><a href="#">10-30lpa</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Average Company</a></li>
+                            <li><a href="#">Bulk Recutires</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="Student Lists">Student Lists</a>
+                        <input type="hidden" id="TypesOfStudent">
+                        <label for="TypesOfStudent">Branch</label>
+                        <ul>
+                            <li><a href="#">CE</a></li>
+                            <li><a href="#">IT</a></li>
+                            <li><a href="#">ENTC</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="file:///C:/Users/DELL/Desktop/Recruiters/adlog/Student-Login.html">Add a Student</a></li>
+                    <li><a href="file:///C:/Users/DELL/Desktop/Recruiters/adlog/AddCompany.html">Add a Company</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="addcomp">
+        <div class="company">
+            <h2>Add a Company</h2>
+            <form action="action_page.php">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="cname">Company Name</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="cname" name="comapny-name" placeholder="Company Name...">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="cgpacr">CGPA Criteria</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="number" id="cgpacr" name="cgpacr" placeholder="Required CGPA">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="ctc">Cost-to-Company(CTC)</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="number" id="ctc" name="ctc" placeholder="CTC">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="post">Post as</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="post" name="post" >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="Email">Email</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="email" id="Email" name="Email" placeholder="Your Email...">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="loc">Location of post</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="loc" name="loc" placeholder="Location..">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="period">Training period</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="period" name="period" placeholder="Period..">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="workcul">Work Culture</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="workcul" name="workcul" placeholder="Describe experience at work...">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="alu">Alumni</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="loc" name="loc" placeholder="Alumni of Company..">
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+        *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          text-decoration: none;
+          font-family: 'Poppins', sans-serif;
+          list-style-type: none;
+        }
+        
+        .header{
+            background-color: #171c24;
+            position: fixed;
+            width: 100%;
+        }
+        .header nav{
+            position: relative;
+            display: flex;
+            max-width: calc(100% - 200px);
+            margin:0 auto;
+            height: 70px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        nav .content{
+            display: flex;
+            align-items: center;
+        }
+        nav .content .tab{
+            margin-left: 80px;
+            display: flex;
+        }
+        .content .logo a{
+            color: #fff;
+            font-size: 30px;
+            font-weight: 600;
+        }
+        .content .tab li{
+            list-style: none;
+            line-height: 70px;
+        }
+        .content .tab li a,
+        .content .tab li label{
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 9px 17px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .content .tab li label{
+          display: none;
+        }
+        .content .tab li a:hover,
+        .content .tab li label:hover{
+          background: #323c4e;
+        }
+        
+        /* Dropdown Menu code start */
+        .content .tab ul{
+            position: absolute;
+            background: #171c24;
+            top: 80px;
+            z-index: -1;
+            opacity: 0;
+            visibility: hidden;
+            margin: 0px;
+        }
+        .content .tab li:hover > ul{
+            top: 70px;
+            opacity: 1;
+            visibility: visible;
+            transition: all 0.3s ease;
+        }
+        .content .tab ul li a{
+            display: block;
+            width: 100%;
+            line-height: 30px;
+            border-radius: 0px!important;
+        }
+        .content .tab ul ul{
+            position: absolute;
+            top: 0;
+            right: calc(-76% + 8px);/*148px*/
+        }
+        .content .tab ul li{
+            position: relative;
+        }
+        .content .tab ul li:hover ul{
+            top: 0;
+        }
+        .table{
+            border-collapse: collapse;
+            border-top-width: 10px;
+            margin: auto;
+            font-size: 0.9em;
+            min-width: 1000px;
+            border-radius: 5px 5px 0 0;
+            overflow: hidden;
+            table-layout: auto;
+        }
+        .table thead .Institue-Name{
+            text-align: center;
+            font-size: larger;
+        }
+        .table thead tr{
+            background-color: rgb(3, 231, 216);
+            color: #ffffff;
+            text-align: left;
+            font-weight: bold;
+        }
+        .table th,
+        .table td{
+            padding: auto auto;
+        }
+        .table tbody tr:last-of-type{
+            border-bottom: 3px solid #238adf;
+        }
+        .table tbody tr{
+            background-color: rgba(166, 255, 245, 0.667);
+            color: #238adf;
+        }
+        .table tbody tr:nth-of-type(odd){
+            background-color: #ffffff;
+            color: #238adf;
+        }
+        .table tbody tr:hover{
+            background-color: rgba(0, 255, 238, 0.5);
+            font-weight: bold;
+            color: #000;
+        }
+        
+        
+        /* Responsive code start */
+        @media screen and (max-width: 1250px){
+            .header nav{
+              max-width: 100%;
+              padding: 0 20px;
+            }
+            nav .content .tab{
+              margin-left: 30px;
+            }
+            .content .tab li a{
+              padding: 8px 13px;
+            }
+            .table{
+                min-width: 1000px;
+            }
+        }
+        
+        @media screen and (max-width: 900px){
+            nav .content .tab{
+                display: block;
+                position: fixed;
+                background: #14181f;
+                height: 100%;
+                width: 100%;
+                top: 70px;
+                left: -100%;
+                margin-left: 0;
+                max-width: 350px;
+                overflow-y: auto;
+                padding-bottom: 100px;
+                transition: all 0.3s ease;
+            }
+            .content .tab li{
+                margin: 15px 20px;
+            }
+            .content .tab li a,
+            .content .tab li label{
+                line-height: 40px;
+                font-size: 20px;
+                display: block;
+                padding: 8px 18px;
+                cursor: pointer;
+            }
+            .content .tab li a.desktop-link{
+                display: none;
+            }
+            .table{
+                min-width: 500px;
+            }
+        
+            /* dropdown responsive code start */
+            .content .tab ul,
+            .content .tab ul ul{
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                background: none;
+                max-height: 0px;
+                overflow: hidden;
+            }
+            .content .tab #show-features:checked ~ ul,
+            .content .tab #show-services:checked ~ ul,
+            .content .tab #show-items:checked ~ ul{
+                max-height: 100vh;
+            }
+            .content .tab ul li{
+                margin: 7px 20px;
+            }
+            .content .tab ul li a{
+                font-size: 18px;
+                line-height: 30px;
+                border-radius: 5px!important;
+            }
+        }
+        
+        @media screen and (max-width: 400px){
+            .header nav{
+              padding: 0 10px;
+            }
+            .content .logo a{
+              font-size: 27px;
+            }
+            .table{
+                min-width: 300px;
+            }
+        }
+        </style>
+    <link rel="stylesheet" href="AdminPage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <!--<link rel="stylesheet" href="Page2.css">-->
+</head>
+<body>
+    <div class="grid">
+        <div class="header">
+            <nav>
+                <div class="content">
+                <div class="logo"><a href="#">PIRERS</a></div>
+                    <ul class="tab">
+                        <li><a href="file:///D:/Web%20dev/AdminPage.html">Home</a></li>
+                        <li>
+                            <a href="#" class="Company Lists">Companies</a>
+                            <input type="hidden" id="TypesOfCompany">
+                            <label for="TypesOfCompany">Company Types</label>
+                            <ul>
+                                <li><a href="#">Dream Company</a></li>
+                                <li><a href="#" class="Company Lists">Based on CTC</a>
+                                    <input type="hidden" id="CTC">
+                                    <label for="CTC">CTC</label>
+                                    <ul>
+                                        <li><a href="#">Above 50lpa</a></li>
+                                        <li><a href="#">30-50 lpa</a></li>
+                                        <li><a href="#">10-30lpa</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Average Company</a></li>
+                                <li><a href="#">Bulk Recutires</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="Student Lists">Student Lists</a>
+                            <input type="hidden" id="TypesOfStudent">
+                            <label for="TypesOfStudent">Branch</label>
+                            <ul>
+                                <li><a href="#">CE</a></li>
+                                <li><a href="#">IT</a></li>
+                                <li><a href="#">ENTC</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="file:///C:/Users/DELL/Desktop/Recruiters/adlog/Student-Login.html">Add a Student</a></li>
+                        <li><a href="file:///C:/Users/DELL/Desktop/Recruiters/adlog/AddCompany.html">Add a Company</a></li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div student-list>
+            <table class="table">
+                <thead>
+                    <tr class="Institue-Name">
+                        <th align="centre" colspan="5">Pune Institute of Computer Technology</th>
+                    </tr>
+                    <tr class="heading">
+                        
+                        <th align="left">Seat Number</th>
+                        <th align="left">Name</th>
+                        <th align="left">Brach</th>
+                        <th align="left">Shift</th>
+                        <th align="left">CGPA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        
+                        <td>F190050222</td>
+                        <td>Ganak Bangard</td>
+                        <td>ENTC</td>
+                        <td>2</td>
+                        <td>9.0</td>
+                    </tr>
+                    <tr>
+                        <td>F190050223</td>
+                        <td>Aditya Kadu</td>
+                        <td>CE</td>
+                        <td>2</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>F190050224</td>
+                        <td>Shruti Shinde</td>
+                        <td>IT</td>
+                        <td>2</td>
+                        <td>9.3</td>
+                    </tr>
+                    <tr>
+                        <td>F190050225</td>
+                        <td>Jeeya Shah</td>
+                        <td>CE</td>
+                        <td>2</td>
+                        <td>9.5</td>
+                    </tr>
+                    <tr>
+                        <td>F190050226</td>
+                        <td>Charul Nampalliwar</td>
+                        <td>CE</td>
+                        <td>2</td>
+                        <td>9.5</td>
+                    </tr>
+                    <tr>
+                        <td>F190050227</td>
+                        <td>Hritika Phapale</td>
+                        <td>ENTC</td>
+                        <td>2</td>
+                        <td>9.5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

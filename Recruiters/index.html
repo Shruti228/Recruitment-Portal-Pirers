@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pirers</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/vs.10.0/css/all.css">
+    <link rel="stylesheet" href="evo-calendar.min.css">
+    <link rel="stylesheet" href="evo-calendar.midnight-blue.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+   
+  
+</head>
+<body background="bg3.jpg"> 
+<header>
+        <div class="container">
+            <img src="pi1.png" alt="" height="200px" style="margin: 5px; filter: invert(1);position:relative;">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Contact">Contact</a></li>
+                <li><a href="#">Feature</a></li>
+                <li><a href="#calendar">Calendar</a></li>
+                <li><a href="file:///C:/Users/DELL/Desktop/Recruiters/mediator.html">Login</a></li>
+                
+                   
+            </ul>
+            
+        </nav>
+    </div>
+      
+    <div style="margin-top:640px;"></div>
+    <h2 style="text-align:center; font-family:algerian;font-size: 40px;color: rgb(72, 30, 114);"></h2>
+    <h2 id="calendar" ></h2>
+    <div class="hero">
+        <div id="calendar"></div>           
+
+
+    </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>  
+  <script src="evo-calendar.min.js"></script>  
+  <script>
+      $(document).ready(function() {
+          $('#calendar').evoCalendar({
+              calendarEvents: [
+                  {
+                      id: 'Birthday', // Event's ID (required)
+                      name: "Janvi's Birthday", // Event name (required)
+                      date: "June/21/2003", // Event date (required)
+                      type: "birthday", // Event type (required)
+                      everyYear:false // Same event every year (optional)
+                    },
+                    {
+                        name: "Vacation Leave",
+                        badge: "02/13 - 02/15", // Event badge (optional)
+                        date: ["February/13/2022", "February/15/2022"], // Date range   
+                        description: "Vacation leave for 3 days.", // Event description (optional)
+                        type: "event",
+                        color: "#63d867" // Event custom color (optional)
+                    },
+                    {
+                        name: " Amazon",
+                        badge:"06/01 - 06/03",
+                        date:["June/01/2022" , "June/03/2022"],
+                        description:"First slot:10:00am ,Break:12:00pm-1:00pm,Second Slot:1:00pm",
+                        type:"event",
+                        color:"#63d867"
+                        
+                    },
+                    {
+                        name: "Rakuten",
+                        badge:"06/01 - 06/03",
+                        date:["June/01/2022" , "June/03/2022"],
+                        description:"First slot:9:00am ,Break:12:00pm-1:00pm,Second Slot:1:00pm",
+                        type:"event",
+                        color:"#4576fd"
+                    },
+                    {
+                        name: "Microsoft",
+                        badge:"06/01 - 06/05",
+                        date:["June/01/2022" , "June/03/2022"],
+                        description:"First slot:9:30am ,Break:12:00pm-1:00pm,Second Slot:1:00pm",
+                        type:"event",
+                        color:"#fffff"
+                    },
+                    {
+                        name: "Mastercard",
+                        badge:"19/07 - 19/07",
+                        date:["July/19/2022" , "July/19/2022"],
+                        description:"First slot:11:00am ,Break:12:00pm-1:00pm,Second Slot:1:00pm Apply Now:",
+                        type:"birthday",
+                        color:"#cceeff"
+                    },
+                    {
+                        name: "Infosys",
+                        badge:"20/07 - 22/07",
+                        date:["July/20/2022" , "July/22/2022"],
+                        description:"First slot:11:00am ,Break:12:00pm-1:00pm,Second Slot:1:00pm",
+                        type:"event",
+                        color:"#cceeff"
+                    },
+                    
+                ]
+       
+
+        
+    
+        
+    })
+})
+  </script>
+   <div class="company-wrap">
+    <h1 style="text-align:left;font-family:'Poppins'">OUR RECRUITERS</h1>
+    <hr>
+    <div class="company-in">
+        <ul>
+            <li>
+                <img src="data:image/png;base64,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" alt=""/>
+
+                
+            </li>
+            <li>
+                <img src="microsoft.png" alt=""/>
+              </li>
+              <li>
+                  <img src="rakuten.png" alt=""/>
+              </li>
+              <li>
+                  <img src="pharmeas1y.jpg" alt=""/>
+              </li>
+              <li>
+                  <img src="persistent.jpg"alt="" style="shape-margin: 100px 100px;"/>
+              </li>
+              <li>
+                  <img src="phnpe.jpg" alt=""/>
+              </li>
+              <li>
+                  <img src="ion.png" alt=""/>
+              </li>
+              <li>
+                  <img src="mastercard.png" alt=""/>
+              </li>
+              <li>
+                  <img src="desbank.png" alt=""/>
+              </li>
+              <li>
+                  <img src="hdfc.png" alt=""/>
+              </li>
+              <li>
+                  <img src="tcs.png" alt=""/>
+              </li>
+              <li>
+                  <img src="sch.png" alt=""/>
+              </li>
+              <li>
+                  <img src="ptm.jpg" alt=""/>
+              </li>
+              <li>
+                  <img src="esif.png" alt=""/>
+              </li>
+              <li>
+                  <img src="trio.ljpg.jpg" alt=""/>
+              </li>
+              <li>
+                  <img src="bajaj.png" alt=""/>
+              </li>
+          </li>
+
+        </ul>
+    </div>
+</div>
+<!--OUR TEAM-->
+
+<div class="container3">
+    <div class="head1">
+        <h1>Our Team</h1>
+    </div>
+    <div class="sb-container">
+    <div class="teams">
+        <img src="pp.png" alt="">
+        <div class="name">Shruti Shinde</div>
+        <div class="desig">Web Developer</div>
+        <div class="social">
+            <a href="https://www.linkedin.com/in/shruti-shinde-5724a222a?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAADlhiqYB-R7zDTNxsPpgwkMR5VUSpT_dAik&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3Bt%2BMby5CKQ0aEE8Wa7x7%2B6A%3D%3D"><i class="fa fa-linkedin"></i></a>
+        </div>
+    </div>
+    <div class="teams">
+        <img src="pp.png" alt="">
+        <div class="name">Hritika Phapale</div>
+        <div class="desig">Designer</div>
+        <div class="social">
+            <a href="https://www.linkedin.com/in/hritika-phapale-309997234?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAADqFtfkBiEI4qwKOz-OSiKvTKGyp7gYhUiI&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BZcsq0s6oQwmbuqPqsrJe2Q%3D%3D"><i class="fa fa-linkedin"></i></a>
+            <a href="#" class="fa fa-instagram"></a>
+        </div>
+    </div>
+    <div class="teams">
+        <img src="pp.png" alt="">
+        <div class="name">Jeeya Shah</div>
+        <div class="desig">Backend Developer</div>
+        <div class="social">
+            <a href="https://www.linkedin.com/in/jeeya-shah-a217b822a?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAADltarkB1EYUNz34B8X0VCwtjAu6ty9lwvI&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BeRlrGMtASvSLfLntJYT%2FsQ%3D%3D"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/invites/contact/?i=1fksej6fdhwf9&utm_content=5p5h3cu" ><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        </div>
+    </div>
+    <div class="teams">
+        <img src="pp.png" alt="">
+        <div class="name">Charul Nampalliwar</div>
+        <div class="desig">Web Developer & Report Manager</div>
+        <div class="social">
+            <a href="https://www.linkedin.com/in/charul-nampalliwar-43148b22a?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAADlhJKUBJ94E1r35C_EgjcneJSemnRe-epg&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BJsp6LPNCTguoFLCRSu26SQ%3D%3D"><i class="fa fa-linkedin"></i></a>
+            <a href="#" ><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        </div>
+    </div>
+    <div class="teams">
+        <img src="pp.png" alt="">
+        <div class="name">Aditya Kadu</div>
+        <div class="desig">Web Developer</div>
+        <div class="social">
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/invites/contact/?i=lkjl9affup39&utm_content=npfi461" ><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        </div>
+    </div>
+    <div class="teams">
+        <img src="pp.png" alt="">
+        <div class="name">Ganak Bangard</div>
+        <div class="desig">Web Developer</div>
+        <div class="social">
+            <a href="https://www.linkedin.com/in/ganak-bangard-aa16271b3?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAADG_j1kBTTFyM1reo2pVjUJdDQgUn5uAdmw&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3B2ajqjsPOQ1SR2%2BC6kTqPGA%3D%3D"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/invites/contact/?i=1vgt40hun66jg&utm_content=2yspxe9"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+  
+<h2 id="Contact"></h2>
+    <div class="cu">
+    <div class="contactus">
+        <div class="tit">
+            <h2>Get In Touch</h2>
+        </div>
+        <div class="box">
+            <div class="contact form">
+                <h3>Send a Message</h3>
+                <form>
+                    <div class="formbox">
+                        <div class="row30">
+                            <div class="inputbox">
+                                <span>First Name</span>
+                                <input type="text" placeholder="john">
+                            </div>
+                            <div class="inputbox">
+                                <span>Last Name</span>
+                                <input type="text" placeholder="Doe">
+                            </div>
+                        </div>
+                        <div class="row100">
+                            <div class="inputbox">
+                                <span>Email</span>
+                                <input type="text" placeholder="johndoe@gmail.com">
+                            </div>
+                           
+                        </div>
+                        <div class="row100">
+                            <div class="inputbox">
+                            <span>Mobile</span>
+                            <input type="text" placeholder="+91 987 654 3210">
+                            </div>
+                        </div>
+                        <div class="row100">
+                            <div class="inputbox">
+                                <span>Message</span>
+                                <textarea placeholder="Write Your Measage..."></textarea>
+                            </div>
+                        </div>
+                    
+                       
+                            <input type="submit" value="Send" class="loginbtn1">
+                    </div>
+                </form>
+        </div>
+        <!-- info box-->
+        <div class="contact info">
+            <h3>Contact Info</h3>
+            <div class="infobox">
+                <div>
+                    <span><ion-icon name="location-outline"></ion-icon></span>
+                    <p>Survey No. 27, Near Trimurti Chowk Dhankwadi, Pune - 411043</p>
+                </div>
+                <div>
+                    <span><ion-icon name="mail-outline"></ion-icon></span>
+                    <a href="mailto:registrar@pict.edu">registrar@pict.edu</a>
+                </div>
+                <div>
+                    <span><ion-icon name="call-outline"></ion-icon></span>
+                    <a href="tel:+91 20 24371101">+91 20 24371101</a>
+                </div>
+                <!--Social Media Links-->
+                <div class="sci">
+                    <li><a href="https://www.facebook.com/PICTOfficial"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                    <li><a href="https://twitter.com/punepict?lang=en"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                    <li><a href="https://in.linkedin.com/school/pune-institute-of-computer-technology/"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                    <li><a href="https://www.instagram.com/pict.pune/?hl=en"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                </div>
+            </div>
+        </div>
+        <div class="contact map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.5761897254206!2d73.84864491512143!3d18.457542087445752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eac85230ba47%3A0x871eddd0a8a0a108!2sSCTR&#39;S%20Pune%20Institute%20of%20Computer%20Technology!5e0!3m2!1sen!2sin!4v1654961913403!5m2!1sen!2sin"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</div>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</div>
+
+
+
+    
+</body>
+
+<footer class="footer">
+    <div class="container2">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Follow us</h4>
+                
+                <ul>
+                <div class="social-links">
+                    <a href="#"><i class="fa fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-youtube"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                </ul>
+
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                    <div>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+    
+                    </div>
+            </div>
+        </div>			
+    </div>
+</div>
+</div>
+</html>
+              

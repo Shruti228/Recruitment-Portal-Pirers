@@ -1,0 +1,45 @@
+
+.table{
+    border-collapse: collapse;
+    border-top-width: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    font-size: 0.9em;
+    min-width: 500px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    width: 50%;
+    height: auto;
+    table-layout: auto;
+}
+.table thead .Institue-Name{
+    text-align: center;
+    font-size: larger;
+}
+.table thead tr{
+    background-color: rgb(3, 231, 216);
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+.table th,
+.table td{
+    padding: 12px 15px;
+}
+.table tbody tr:last-of-type{
+    border-bottom: 3px solid #238adf;
+}
+.table tbody tr{
+    background-color: rgba(166, 255, 245, 0.667);
+    color: #238adf;
+}
+.table tbody tr:nth-of-type(odd){
+    background-color: #ffffff;
+    color: #238adf;
+}
+.table tbody tr:hover{
+    background-color: rgba(0, 255, 238, 0.5);
+    font-weight: 300;
+    color: #000;
+}
